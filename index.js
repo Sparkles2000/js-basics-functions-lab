@@ -15,12 +15,13 @@ function distanceFromHqInBlocks (block) {
       return (start - end) * 264;
     }
   }
-  function calculatesFarePrice (start, end) {
+  function calculatesFarePrice (start, end)
+   {
     const dist = distanceTravelledInFeet(start, end)
     if (dist <= 400) {
       return 0;
     } else if (dist > 400 && dist <= 2000) {
-      return .02 * dist - 400;
+      return .02 * (dist - 400);
     } else if (dist > 2000 && dist < 2500) {
       return 25;
     } else {
